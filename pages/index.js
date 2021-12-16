@@ -1,82 +1,61 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Login from "../components/Login";
+import { useMoralis } from "react-moralis";
+import Image from "next/image";
 
 export default function Home() {
+  const { isAuthenticated, logout } = useMoralis();
+
+  if (!isAuthenticated) return <Login />;
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Metaverse Challenge</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="bg-black relative">
+        <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center">
+          <Image
+            className="fadein object-cover rounded-full"
+            src="https://avatars.githubusercontent.com/u/45666401?v=4"
+            height={200}
+            width={200}
+          />
+          <h1 className="links text-4xl text-white mb-2 mt-4">
+            Savvas Mantzouranidis
+          </h1>
+          <div className="links space-x-10 text-gray-300 mb-20">
+            <a
+              className="hover:text-white transition ease-out"
+              target="_blank"
+              href="https://dazzling-lamport-1e16eb.netlify.app/"
+            >
+              Day 1 Homework
+            </a>
+            <a
+              className="hover:text-white transition ease-out"
+              target="_blank"
+              href="https://mantzouranidis.tech"
+            >
+              About Me
+            </a>
+          </div>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+          <button
+            onClick={logout}
+            className="bg-cyan-500 rounded-full p-5 font-bold text-white transform hover:scale-125 transition ease-out duration-200"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            Logout to the real world.
+          </button>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+        <div class="header">
+          <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
