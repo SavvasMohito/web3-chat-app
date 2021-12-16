@@ -59,26 +59,6 @@
 
 /* end of wave animation */
 
-@keyframes slideInFromTop {
-	0% {
-		transform: translateY(-100%);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes slideInFromBot {
-	0% {
-		transform: translateY(100%);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -89,14 +69,6 @@
 	}
 }
 
-.links {
-	animation: 500ms ease-out 0s 1 slideInFromTop;
-}
-
 .fadein {
 	animation: fadeIn 500ms;
-}
-
-button {
-	animation: 500ms ease-out 0s 1 slideInFromBot;
 }
