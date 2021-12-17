@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import Image from "next/image";
 
 function Login() {
   const { authenticate } = useMoralis();
@@ -27,10 +27,10 @@ function Login() {
           Please follow the MetaMask prompt and login.
         </h1>
       </div>
-      <div class="header">
-        <div class="ocean">
-          <div class="wave"></div>
-          <div class="wave"></div>
+      <div className="header">
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
         </div>
       </div>
     </div>
