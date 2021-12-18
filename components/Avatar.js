@@ -6,7 +6,7 @@ function Avatar({ username }) {
 
   return (
     <Image
-      className="rounded-full bg-black"
+      className="rounded-full bg-neutral-700"
       src={`https://avatars.dicebear.com/api/personas/${
         username || user.getUsername()
       }.svg`}

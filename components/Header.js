@@ -6,7 +6,7 @@ function Header() {
   const { user, logout } = useMoralis();
 
   return (
-    <div className="sticky z-50 flex text-blue-400 justify-center align-center space-x-2 xs:space-x-4 p-3 sm:p-4 bg-black/75 shadow-sm border-b-2 border-blue-400">
+    <div className="sticky top-0 z-50 flex text-blue-400 justify-center align-center space-x-2 xs:space-x-4 p-3 sm:p-4 bg-black shadow-sm border-b-2 border-blue-400">
       <div className="relative h-28 w-28 xs:h-32 xs:w-32 sm:h-48 sm:w-48 border-4 border-blue-400 rounded-full">
         <Avatar />
       </div>

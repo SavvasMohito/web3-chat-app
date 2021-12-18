@@ -3,6 +3,7 @@ import Head from "next/head";
 import Login from "../components/Login";
 import Image from "next/image";
 import Header from "../components/Header";
+import Messages from "../components/Messages";
 
 export default function Home() {
   const { isAuthenticated, logout } = useMoralis();
@@ -10,16 +11,15 @@ export default function Home() {
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-blue-900 overfllow-hidden">
+    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-blue-900 overflow-hidden">
       <Head>
         <title>Metaverse Challenge</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <div className="max-w-screen-lg mx-auto">
-          <Header />
-        </div>
+      <div className="max-w-screen-lg mx-auto">
+        <Header />
+        <Messages />
       </div>
     </div>
   );
