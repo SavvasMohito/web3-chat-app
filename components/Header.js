@@ -10,12 +10,12 @@ function Header() {
       <div className="relative h-28 w-28 xs:h-32 xs:w-32 sm:h-48 sm:w-48 border-4 border-blue-400 rounded-full">
         <Avatar />
       </div>
-      <div className="my-auto space-y-2 sm:space-y-5">
+      <div className="my-auto text-center space-y-2 sm:space-y-5">
         <h1 className="xs:text-xl sm:text-2xl text-yellow-500 sm:pt-0">
           Welcome to the METAVERSE!
         </h1>
         <div className="-space-y-1">
-          <h2 className="text-sm xs:text-lg">You username is</h2>
+          <h2 className="text-sm xs:text-lg">Your name is</h2>
           <h2 className="text-lg xs:text-2xl sm:text-3xl text-blue-300 font-bold truncate">
             {user.getUsername()}
           </h2>
@@ -25,7 +25,7 @@ function Header() {
             <ChangeUsername />
             <button
               onClick={logout}
-              className="bg-red-500 shadow-sm shadow-red-500/30 text-white rounded-full px-2 xs:px-3 py-1 transform hover:scale-105 transition ease-out duration-200"
+              className="bg-red-500 shadow-sm shadow-red-500/30 text-white rounded-full px-2 xs:px-3 py-1 transform hover:opacity-90 hover:scale-105 transition ease-out"
             >
               Logout
             </button>

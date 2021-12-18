@@ -1,37 +1,55 @@
-import { useMoralis } from "react-moralis";
+import { useMoralis, ByMoralis } from "react-moralis";
 import Image from "next/image";
+import AvatarRand from "./AvatarRand";
 
 function Login() {
   const { authenticate } = useMoralis();
 
   return (
     <div className="bg-black relative">
-      <div className="fadein flex flex-col absolute z-50 h-4/6 w-full items-center justify-center text-center">
-        <Image
-          className="object-cover rounded-full shadow-lg"
-          src="https://avatars.githubusercontent.com/u/45666401?v=4"
-          height={200}
-          width={200}
-        />
-        <h1 className="text-4xl text-white mb-20 mt-4">
-          Savvas Mantzouranidis
-        </h1>
-
+      <div className="flex flex-col absolute z-50 h-5/6 w-full items-center justify-center text-center text-white space-y-10">
+        <h1 className="text-4xl sm:text-5xl">Welcome to the METAVERSE!</h1>
+        <div className="relative h-48 w-48 sm:h-60 sm:w-60 border-4 border-yellow-400 rounded-full">
+          <AvatarRand />
+        </div>
+        <div className="sm:text-2xl">
+          <h2>Chat with people all around the world!</h2>
+          <h2>Login and enjoy the Web 3.0 experience.</h2>
+        </div>
         <button
           onClick={authenticate}
-          className="bg-sky-500 shadow-lg shadow-sky-500/20 rounded-full p-4 font-bold text-white transform hover:scale-110 transition ease-out duration-200"
+          className="bg-yellow-400 shadow-lg shadow-yellow-500/30 rounded-full px-6 py-4 font-bold text-black transform hover:scale-105 transition ease-out text-xl sm:text-2xl"
         >
-          Login to the METAVERSE!
+          Login using MetaMask!
         </button>
-        <h1 className="text-xl text-white p-4">
-          Please follow the MetaMask prompt and login.
-        </h1>
       </div>
-      <div className="header">
-        <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
+      <div className="w-full h-screen bg-black">
+        <Image
+          className="opacity-50"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/80/Backgorund.gif"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+
+      <div className="absolute whitespace-nowrap bottom-2 word-wrap left-[50%] translate-x-[-50%] text-sm text-gray-400/50">
+        <div className="border-2 border-gray-400/50 rounded-full my-2">
+          <ByMoralis
+            variant="dark"
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+          />
         </div>
+
+        <p>
+          Made with ❤️ by{" "}
+          <a
+            href="https://mantzouranidis.tech"
+            target="_blank"
+            className="hover:text-gray-300 transition ease-out"
+          >
+            Savvas Mantzouranidis
+          </a>
+        </p>
       </div>
     </div>
   );

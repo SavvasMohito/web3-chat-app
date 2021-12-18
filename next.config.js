@@ -4,8 +4,7 @@ module.exports = {
     domains: [
       "avatars.dicebear.com",
       "links.papareact.com",
-      "avatars.githubusercontent.com",
-      "www.svgrepo.com",
+      "upload.wikimedia.org",
     ],
   },
 };
