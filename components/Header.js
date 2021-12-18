@@ -21,7 +21,7 @@ function Header() {
           </h2>
         </div>
         <div>
-          <div className="space-x-2 xs:space-x-3 text-sm">
+          <div className="space-x-2 xs:space-x-3 text-sm xs:text-md sm:text-lg">
             <ChangeUsername />
             <button
               onClick={logout}

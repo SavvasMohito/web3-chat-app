@@ -13,14 +13,14 @@ function Message({ message }) {
     >
       <div className="flex items-end space-x-2">
         <div
-          className={`relative h-8 w-8 rounded-full ${
+          className={`relative flex-none h-8 w-8 rounded-full ${
             isUserMessage && "order-last ml-2"
           }`}
         >
           <Avatar username={message.get("username")} />
         </div>
         <div
-          className={`flex space-x-4 p-3 rounded-full shadow-md ${
+          className={`max-w-3xl py-3 px-4 rounded-3xl shadow-md ${
             isUserMessage
               ? "rounded-br-none bg-blue-300"
               : "rounded-bl-none bg-yellow-300"
