@@ -1,4 +1,5 @@
 import { useMoralis, ByMoralis } from "react-moralis";
+import Head from "next/head";
 import Image from "next/image";
 import AvatarRand from "./AvatarRand";
 
@@ -7,6 +8,10 @@ function Login() {
 
   return (
     <div className="bg-black relative">
+      <Head>
+        <title>Login to the METAVERSE</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex flex-col absolute z-50 h-5/6 w-full items-center justify-center text-center text-white space-y-10">
         <h1 className="text-4xl sm:text-5xl">Welcome to the METAVERSE!</h1>
         <div className="relative h-48 w-48 sm:h-60 sm:w-60 border-4 border-yellow-400 rounded-full">
