@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 function AvatarRand() {
-  const [name, setName] = useState(0);
+  const [name, setName] = useState("savvas");
 
   useEffect(() => {
     setInterval(() => {
@@ -13,7 +13,6 @@ function AvatarRand() {
     }, 5000);
   }, []);
 
-  console.log(name);
   return (
     <Image
       className="rounded-full bg-neutral-700"

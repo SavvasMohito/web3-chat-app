@@ -6,3 +6,17 @@ body,
 html {
 	font-family: 'Open Sans', sans-serif
 }
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadein {
+	animation: fadeIn 200ms;
+}

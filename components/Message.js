@@ -9,7 +9,9 @@ function Message({ message }) {
 
   return (
     <div
-      className={`flex items-end relative ${isUserMessage && "justify-end"}`}
+      className={`flex items-end relative fadein ${
+        isUserMessage && "justify-end"
+      }`}
     >
       <div className="flex items-end space-x-2">
         <div

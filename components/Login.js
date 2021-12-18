@@ -16,11 +16,12 @@ function Login() {
           <h2>Chat with people all around the world!</h2>
           <h2>Login and enjoy the Web 3.0 experience.</h2>
         </div>
+
         <button
           onClick={authenticate}
-          className="bg-yellow-400 shadow-lg shadow-yellow-500/30 rounded-full px-6 py-4 font-bold text-black transform hover:scale-105 transition ease-out text-xl sm:text-2xl"
+          className="block bg-yellow-400 shadow-lg shadow-yellow-500/30 rounded-full px-6 py-4 font-bold text-black transform hover:scale-105 transition ease-out text-xl sm:text-2xl"
         >
-          Login using MetaMask!
+          Login using MetaMask
         </button>
       </div>
       <div className="w-full h-screen bg-black">
