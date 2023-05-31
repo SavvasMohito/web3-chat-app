@@ -30,29 +30,17 @@ function Login() {
         </button>
       </div>
       <div className="w-full h-screen bg-black">
-        <Image
-          className="opacity-50"
-          src="https://upload.wikimedia.org/wikipedia/commons/8/80/Backgorund.gif"
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image className="opacity-50" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Backgorund.gif" layout="fill" objectFit="cover" />
       </div>
 
       <div className="absolute whitespace-nowrap bottom-2 word-wrap left-[50%] translate-x-[-50%] text-sm text-gray-400/50">
         <div className="border-2 border-gray-400/50 rounded-full my-2">
-          <ByMoralis
-            variant="dark"
-            style={{ marginLeft: "auto", marginRight: "auto" }}
-          />
+          <ByMoralis variant="dark" style={{ marginLeft: "auto", marginRight: "auto" }} />
         </div>
 
         <p>
           Made with ❤️ by{" "}
-          <a
-            href="https://mantzouranidis.tech"
-            target="_blank"
-            className="hover:text-gray-300 transition ease-out"
-          >
+          <a href="https://savman.dev" target="_blank" className="hover:text-gray-300 transition ease-out">
             Savvas Mantzouranidis
           </a>
         </p>

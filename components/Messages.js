@@ -10,13 +10,7 @@ function Messages() {
   const endOfMessagesRef = useRef(null);
   const { data, loading, error } = useMoralisQuery(
     "Messages",
-    (query) =>
-      query
-        .ascending("createdAt")
-        .greaterThan(
-          "createdAt",
-          new Date(Date.now() - 1000 * 60 * MINS_DURATION)
-        ),
+    (query) => query.ascending("createdAt").greaterThan("createdAt", new Date(Date.now() - 1000 * 60 * MINS_DURATION)),
     [],
     {
       live: true,
@@ -26,10 +20,7 @@ function Messages() {
   return (
     <div className="pb-48">
       <div className="my-4">
-        <ByMoralis
-          variant="dark"
-          style={{ marginLeft: "auto", marginRight: "auto" }}
-        />
+        <ByMoralis variant="dark" style={{ marginLeft: "auto", marginRight: "auto" }} />
       </div>
 
       <div className="space-y-10 p-4">
@@ -46,11 +37,7 @@ function Messages() {
       <div className="absolute whitespace-nowrap bottom-2 word-wrap left-[50%] translate-x-[-50%] text-sm text-gray-400/50">
         <p>
           Made with ❤️ by{" "}
-          <a
-            href="https://mantzouranidis.tech"
-            target="_blank"
-            className="hover:text-gray-300 transition ease-out"
-          >
+          <a href="https://savman.dev" target="_blank" className="hover:text-gray-300 transition ease-out">
             Savvas Mantzouranidis
           </a>
         </p>
